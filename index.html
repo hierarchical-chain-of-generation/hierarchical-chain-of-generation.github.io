@@ -52,28 +52,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Apply Hierarchical-Chain-of-Generation to Complex Attributes Text-to-3D Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://openreview.net/profile?id=~Yiming_Qin4" target="_blank">Yiming Qin</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://openreview.net/profile?id=~Zhu_Xu1" target="_blank">Zhu Xu</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="http://www.csyangliu.com/" target="_blank">Yang Liu</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Peking University<br>CVPR 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/paper.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,20 +81,9 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Wakals/GASCOL" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -129,11 +117,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/man_mix.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        A man in black coat, yellow shirt, pink trousers, blue leather shoes and green hats is waving.
       </h2>
     </div>
   </div>
@@ -148,7 +136,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent text-to-3D generation models have demonstrated remarkable abilities in producing high-quality 3D assets. Despite their great advancements, current models struggle to generate satisfying 3D objects with complex attributes. The difficulty for such complex attributes 3D generation arises from two aspects: (1) existing text-to-3D approaches typically lift text-to-image models to extract semantics via text encoders, while the text encoder exhibits limited comprehension ability for long descriptions, leading to deviated cross-attention focus, subsequently wrong attribute binding in generated results. (2) Objects with complex attributes often exhibit occlusion relationships between different parts, which demands a reasonable generation order as well as explicit disentanglement of different parts to enable structural coherent and attribute following results. Though some works introduce manual efforts to alleviate the above issues, their quality is unstable and highly reliant on manual information. To tackle above problems, we propose a automated method Hierarchical-Chain-of-Generation (HCoG).  It leverages a large language model to analyze the long description, decomposes it into several blocks representing different object parts, and organizes an optimal generation order from in to out according to the occlusion relationship between parts, turning the whole generation process into a hierarchical chain. For optimization within each block, we first generate the necessary components coarsely, then bind their attributes precisely by target region localization and corresponding 3D Gaussian kernel optimization. For optimization between blocks, we introduce Gaussian Extension and Label Elimination to seamlessly generate new parts by extending new Gaussian kernels, re-assigning semantic labels, and eliminating unnecessary kernels, ensuring that only relevant parts are added without disrupting previously optimized parts. Experiments validate HCoG's effectiveness in handling complex attributes 3D assets and witnesses high-quality results.
           </p>
         </div>
       </div>
@@ -165,32 +153,18 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The problem of existing work and the example of our method.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/method.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Overview of Hierarchical-Chain-of-Generation.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -200,53 +174,72 @@
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
 
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3">More results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
+            <source src="static/videos/man.mp4"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            A man in black coat, yellow shirt, pink trousers, blue leather shoes and green hats is waving.
+          </h2>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <source src="static/videos/girl.mp4"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            A cartoon girl with short hair wears gray shirt, blue skirt, yellow shoes, pink jacket and brown hat is dancing.
+          </h2>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <source src="static/videos/dog.mp4"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            A yellow dog wears a pink shirt, two pairs of pink shoes, and a blue collar.
+          </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/dog_car.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            A wooden dog driving an origami sport car.
+          </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/cat.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            An orange cat wearing a yellow suit and cyan boots.
+          </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/monkey_car.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            A metal monkey wearing a golden crown and driving an origami sport car.
+          </h2>
         </div>
       </div>
     </div>
@@ -291,7 +284,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
