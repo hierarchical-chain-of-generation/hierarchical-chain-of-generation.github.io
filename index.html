@@ -121,7 +121,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        A man in black coat, yellow shirt, pink trousers, blue leather shoes and green hats is waving.
+        A man in black coat, yellow shirt, pink trousers, blue leather shoes, a pair of sunglasses with orange boarder, red gloves and green hats is waving.
       </h2>
     </div>
   </div>
@@ -156,14 +156,20 @@
         <!-- Your image here -->
         <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          The problem of existing work and the example of our method.
+          <b>The problem of existing work and the example of our method.</b> Our method (HCoG) leverages LLM to generate hierarchical chain of generation, realizing automatic generation of 3D assets with better complex
+          attributes binding capability.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
         <img src="static/images/method.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Overview of Hierarchical-Chain-of-Generation.
+          <b>Overview of Hierarchical-Chain-of-Generation.</b> a) In the Hierarchical Blocks stage, LLM analyzes the input text and based
+          on the order from more occlusion to less occlusion, creating the order of generation. b) Part-optimization is applied to the parts in blocks,
+          using Lang-SAM to segment specific parts and utilizing MVDream and ControlNet in fine-grained optimization stage to
+          enable corresponding attributes binding for each part with shape and multi-view consistency. c) Gaussian Extension is applied between
+          blocks, extending new parts for the next block. d) Label Elimination aims to generate new parts by extending new Gaussian kernels (red-star-marked), re-assigning semantic labels (blue-star-marked), and eliminating unnecessary kernels finally, ensuring that only relevant parts
+          are generated without disrupting previously optimized parts.
         </h2>
       </div>
   </div>
@@ -250,6 +256,16 @@
           </video>
           <h2 class="subtitle has-text-centered">
             A boy wears blue shirt with a yellow star on it, gray trousers, blue sport shoes, purple wizard hat and blue jacket, holding a magic stick.
+          </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/cat_red.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            An orange cat wearing a yellow suit and red pumps.
           </h2>
         </div>
       </div>
