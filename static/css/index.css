@@ -150,7 +150,7 @@ body {
   100% { background-position: 100% 50%; }
 }
 
-body {
+/* body {
   animation: animatedGradient 45s ease infinite;
   background: linear-gradient(90deg, rgb(255, 227, 227), rgb(254, 246, 232), rgb(255, 255, 229), rgb(233, 255, 233), rgb(236, 236, 255), rgb(246, 233, 255), rgb(255, 232, 255), rgb(255, 230, 230), rgb(255, 247, 230), rgb(255, 255, 232));
   background-size: 400% 400%;
@@ -166,4 +166,10 @@ body {
   100% {
     background-position: 0% 50%;
   }
+} */
+
+body {
+  background-color: #fdfdfd;
+  background-image: 
+    repeating-linear-gradient(45deg, #eaeaea, #eaeaea 1px, transparent 3px, transparent 25px);
 }
