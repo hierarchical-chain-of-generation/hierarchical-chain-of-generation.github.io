@@ -151,30 +151,36 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Method Overview</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          <b>The problem of existing work and the example of our method.</b> Our method (HCoG) leverages LLM to generate hierarchical chain of generation, realizing automatic generation of 3D assets with better complex
-          attributes binding capability.
-        </h2>
+      <div class="method-overview-container">
+        <div class="method-overview-item">
+          <div class="method-image-container">
+            <img src="static/images/teaser.png" alt="Problem and our method example"/>
+          </div>
+          <div class="method-caption">
+            <h2 class="subtitle">
+              <b>The problem of existing work and the example of our method.</b> Our method (HCoG) leverages LLM to generate hierarchical chain of generation, realizing automatic generation of 3D assets with better complex
+              attributes binding capability.
+            </h2>
+          </div>
+        </div>
+        <div class="method-overview-item">
+          <div class="method-caption">
+            <h2 class="subtitle">
+              <b>Overview of Hierarchical-Chain-of-Generation.</b> a) In the Hierarchical Blocks stage, LLM analyzes the input text and based
+              on the order from more occlusion to less occlusion, creating the order of generation. b) Part-optimization is applied to the parts in blocks,
+              using Lang-SAM to segment specific parts and utilizing MVDream and ControlNet in fine-grained optimization stage to
+              enable corresponding attributes binding for each part with shape and multi-view consistency. c) Gaussian Extension is applied between
+              blocks, extending new parts for the next block. d) Label Elimination aims to generate new parts by extending new Gaussian kernels (red-star-marked), re-assigning semantic labels (blue-star-marked), and eliminating unnecessary kernels finally, ensuring that only relevant parts
+              are generated without disrupting previously optimized parts.
+            </h2>
+          </div>
+          <div class="method-image-container">
+            <img src="static/images/method.png" alt="Method overview"/>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/method.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          <b>Overview of Hierarchical-Chain-of-Generation.</b> a) In the Hierarchical Blocks stage, LLM analyzes the input text and based
-          on the order from more occlusion to less occlusion, creating the order of generation. b) Part-optimization is applied to the parts in blocks,
-          using Lang-SAM to segment specific parts and utilizing MVDream and ControlNet in fine-grained optimization stage to
-          enable corresponding attributes binding for each part with shape and multi-view consistency. c) Gaussian Extension is applied between
-          blocks, extending new parts for the next block. d) Label Elimination aims to generate new parts by extending new Gaussian kernels (red-star-marked), re-assigning semantic labels (blue-star-marked), and eliminating unnecessary kernels finally, ensuring that only relevant parts
-          are generated without disrupting previously optimized parts.
-        </h2>
-      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 

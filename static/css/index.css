@@ -173,3 +173,58 @@ body {
   background-image: 
     repeating-linear-gradient(45deg, #eaeaea, #eaeaea 1px, transparent 3px, transparent 25px);
 }
+
+/* Method Overview Layout */
+.method-overview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.method-overview-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.method-overview-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.method-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.method-image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.method-caption {
+  flex: 1;
+  padding: 1rem;
+}
+
+.method-caption .subtitle {
+  margin: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .method-overview-item {
+    flex-direction: column;
+  }
+  
+  .method-overview-item:nth-child(2) {
+    flex-direction: column;
+  }
+  
+  .method-caption {
+    padding: 1rem 0;
+  }
+}
